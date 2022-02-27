@@ -1,5 +1,5 @@
 {% set name = "cmlib" %}
-{% set version = "1.1.1" %}
+{% set version = "1.1.2" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/cmlib-{{ version }}.zip
-  sha256: 61941601a7223940c736bb65e03a04ff503d5099e22aaf03e7d619ff60706ec8
+  sha256: 71e8c419b3507f2b7f26d26c12559ade9a7e3739eaa05d2fa42d5ec40600ac20
 
 build:
   number: 0
