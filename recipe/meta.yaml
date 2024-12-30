@@ -7,11 +7,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/cmlib-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/cmlib-{{ version }}.tar.gz
   sha256: fceda5c272893848545b0b2c9df7c378c60a909c562e50ad57c3fa06d575b5bd
 
 build:
-  number: 0
+  number: 1
   noarch: python
   entry_points:
     - cmlib_demo = cmlib.demo:main
@@ -20,10 +20,10 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.5
+    - python {{ python_min }}
   run:
     - numpy >=1.11
-    - python >=3.5
+    - python >={{ python_min }}
 
 test:
   imports:
@@ -33,6 +33,7 @@ test:
   requires:
     - pip
     - pyqt >=5.12
+    - python {{ python_min }}
 
 about:
   home: https://github.com/titusjan/cmlib
